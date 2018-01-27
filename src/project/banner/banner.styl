@@ -1,0 +1,196 @@
+.banner
+	overflow hidden
+	background: url('../img/banner/banner-backg-1.png') rgba(100, 33, 131, 1) ;
+	background-repeat no-repeat
+	background-size cover
+	background-position 50% 0
+	z-index 10
+
+	// Позиционирование блока
+	&.br__position
+		// max-width 1280px
+		margin 0 auto
+		display flex
+		flex-direction column
+		align-items center
+		justify-content space-between
+		min-height 100vh
+		width 100%
+		position relative
+		top: -70px
+		margin-bottom -70px
+		// margin-bottom -70px
+		+media('xs')
+			top 0
+			justify-content: space-around
+			margin-bottom 0
+			min-height 100%
+			// min-height 100%
+
+
+	// Узор в левом нижнем углу секции
+	.tracery-bottom-1
+		position absolute 
+		bottom -50px
+		left -125px
+		z-index 10
+		+media('xs')
+			display none
+
+	//  Узор в правом нижнем углу секции
+	.tracery-bottom-2
+		position absolute 
+		bottom -50px
+		right -125px
+		z-index 10
+		+media('xs')
+			display none
+	
+	// Логотип (мобилка)
+	.logo-mob
+		display none
+		+media('xs')
+			display block
+			margin 40px 0
+		+media('xxs')
+			text-align center
+			img
+				width 70%
+
+	// Блок текста "Детская одежда"
+	.caption-br
+		z-index 10
+		&.banner__caption
+			margin-top 120px
+			+media('xs')
+				margin-top 0
+			
+		div:nth-child(1)
+			+media('xs')
+				p
+					font-size 70pt
+			+media('xxs')
+				p
+					font-size 34px !important
+					margin-bottom 20px
+		div:nth-child(3)
+			+media('xxs')
+				p
+					font-size 20px !important
+
+	// Блок с текстом и узором. Каталог одежды
+	.text-br
+		z-index 10
+
+		// Позиционирование
+		&.banner__text
+			display flex
+			flex-direction: column
+
+		// Узор 1
+		.tracery-ty-1
+			+media('xs')
+				order 2
+				transform rotate(180deg)
+				text-align center
+				margin 10px 0
+			+media('xxs')
+				img
+					width 50%
+		
+		// узор 2
+		.tracery-ty-2
+			display none
+			+media('xs')
+				display block
+				order 0
+				text-align center
+				margin 10px 0
+			+media('xxs')
+				img
+					width 50%
+
+		// Главный блок текста с кнопкой "Скачать"
+		.button-tr
+			border 3px solid white
+			padding 35px
+			+media('xs')
+				padding 20px
+			
+			// Позиционирование блока
+			&.text-br__button
+				margin-top 25px
+				margin-bottom 20px
+				display flex
+				flex-direction column
+				align-items center
+				justify-content: space-between
+				+media('xs')
+					width 750px
+				+media('xxs')
+					width 90%
+					margin 0 auto
+
+			// Текст
+			.caption-bntr
+				p:nth-child(1)
+					color white
+					font-family: 'OpenSans-Bold';
+					text-transform: uppercase;
+					font-size: 27px;
+					margin-bottom 10px
+					text-align: center
+					+media('xs')
+						font-size 20px
+						display none
+				p:nth-child(2)
+					color white
+					font-family: 'OpenSans-Regular';
+					text-transform: uppercase;
+					font-size: 20px;
+					margin-bottom 25px
+					text-align center
+					+media('xs')
+						display none
+				p:nth-child(3)
+					display none
+					+media('xs')
+						display block
+						color white
+						font-family: 'OpenSans-Bold';
+						text-transform: uppercase;
+						font-size: 40px;
+						margin 20px 0
+						text-align: center
+					+media('xxs')
+						font-size 18px
+						margin 0 0 10px 0
+
+
+			+media('xs')
+				order 1
+			
+		// Иконка мышки
+		.mouse-ttty
+			&.text-ty__mouse
+				display flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				
+				img:nth-child(1)
+					position relative
+					top 0
+					margin-bottom 20px
+					transition top .1s linear
+
+					&:hover
+						cursor: pointer
+						top: 10px
+						transition: top .1s linear
+				
+				img:nth-child(2)
+					margin-bottom 10px
+			
+			+media('xs')
+				display none !important

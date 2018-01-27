@@ -1,0 +1,105 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+}
+
+.container-slider
+    +media('xs')
+        width 700px
+        margin 0 auto
+    +media('xxs')
+        width 260px
+
+
+.container 
+    max-width: 1280px;
+    margin: 0 auto;
+
+    +media('xs')
+        max-width 1028px
+        padding 0
+
+
+.cnsn_black
+    +media('xs')
+        div
+            display none
+
+.span
+    color rgb(225, 51, 67)
+
+// Порядок секции на странице при полной и мобильной вёрстке
+body
+    display flex
+    flex-direction column
+
+    .header
+        order 1
+    .banner
+        order 2
+    .collection
+        order 3
+    .popular
+        order 4
+    .discounts
+        order 5
+    .girl
+        order 6
+    .birthday
+        order 7
+    .boy
+        order 8
+    .catalog
+        order 9
+    .newborns
+        order 10
+    .insta
+        order 11
+    .accessories
+        order 12
+    .quality
+        order 13
+    .call
+        order 14
+        display none
+    .footer
+        order 15
+    
+    +media('xs')
+        .header
+            order 1
+            display none
+        .banner
+            order 2
+        .collection
+            order 3
+        .popular
+            order 4
+        .discounts
+            order 5
+        .girl
+            order 6
+        .boy
+            order 7
+        .catalog
+            order 8
+        .newborns
+            order 9
+        .accessories
+            order 10
+        .birthday
+            order 11
+        .insta
+            order 12
+        .quality
+            order 13
+            display none
+        .call
+            order 14
+            display block
+        .footer
+            order 15
+

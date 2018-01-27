@@ -1,0 +1,37 @@
+.boy
+	.container.tabs-boy
+		div.caption-section.cnsn_black
+			a(name="boy")
+			div.caption-1
+				p Одежда для мальчиков
+			div.caption-line
+				img(src="img/black-line.png", alt="")
+			div.caption-desc
+				p Осень 2017
+		.tabs-product
+			.navbar.navbar-default
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-2', aria-expanded='false')
+						img(src="img/arrow_up.svg", alt="")
+					a.navbar-brand(href='#') Для мальчиков
+					a.navbar-text#navbar-text Some text
+					a(href="#top2").menu-top
+						img(src="img/menu.png", alt="")
+				.collapse.navbar-collapse#bs-example-navbar-collapse-2
+					ul.tabs-ul
+						each item, index in ['Верхняя одежда', 'Кофты', 'Джемпера', 'Джинсы', 'Рубашки', 'Обувь']
+							li
+								a(href="#tabs-"+index)= item
+			.tabs-container
+				a(href="#top").tabs-button-up
+				button(href="#order" data-toggle="modal").tabs-button-yet Ещё
+				.tabs-body
+					each tabs in [0,1,2,3,4,5]
+						div(id="tabs-"+ tabs)
+							each product in [0,1,2,3,4,5]
+								+tabs-product(
+									'Свитер, PlayToday',
+									'img/boy/product/product-' + tabs + '.png',
+									'Яркий, тёплый свитер, с длинным рукавом на манжетах, воротник стойка.',
+									'5 000'
+								)

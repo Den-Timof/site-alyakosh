@@ -1,0 +1,23 @@
+{
+  "name": "mazali",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Denis Timofeev <den.timofeev.1994@mail.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "css-reset": "^2.5.1",
+    "bootstrap": "^3.3.7",
+    "jquery-ui": "^1.12.1",
+    "font-awesome": "^4.7.0"
+  }
+}

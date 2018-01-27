@@ -1,0 +1,60 @@
+#review-modal
+    .modal-dialog
+        .modal-content
+            background-color: #e13343;
+            font-family: 'PT Sans Narrow Web Regular';
+
+            .modal-header
+                .modal-title
+                    font-family: 'PT Sans Narrow Web Bold';
+                    color white
+                    text-transform uppercase
+                    text-align center
+                    font-size 2em
+                .close
+                    color white
+                    opacity 1
+            .modal-body
+                form
+                    display flex
+                    flex-direction column
+                    
+                    label
+                        display flex
+                        align-items center
+                        justify-content: flex-start;
+
+                        &:nth-child(1)
+                            input
+                                height 30px
+                                width 200px
+                                padding 10px
+                        &:nth-child(2)
+                            display: flex;
+                            align-items center;
+                            margin-top 10px
+                            p 
+                                font-family: 'PT Sans Narrow Web Regular';
+                                color white
+                                font-size: 2em;
+                            input
+                                margin 10px
+                                border-color red
+
+                    textarea
+                        width 300px
+                        height 100px
+                        margin-top 20px
+                        padding 10px
+
+            .modal-footer
+                .btn-primary
+                    background-color #e8bf2a
+                    border 2px solid #e13343
+                    background-image none
+                    color #e13343
+                .btn-default
+                    background-color white
+                    background-image none
+                    border 2px solid #e13343
+                    color #e13343

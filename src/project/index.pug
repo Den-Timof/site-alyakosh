@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+html(lang="ru-RU")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="css/libs.min.css")
+        link(rel="stylesheet", href="css/style.css")
+
+        title Alyakosh - детская одежда
+
+
+    body
+
+        //- Модальные окна
+        include partials/modal/order.pug
+        
+        //- Mixins
+        include partials/mixins.pug
+
+        //- Шапка
+        include header/header.pug
+        
+        //- Основные блоки страницы
+        include banner/banner.pug
+        include collection/collection.pug
+        include popular/popular.pug
+        include discounts/discounts.pug
+        include girl/girl.pug
+        include birthday/birthday.pug
+        include boy/boy.pug
+        include catalog/catalog.pug
+        include newborns/newborns.pug
+        include insta/insta.pug
+        include accessories/accessories.pug
+        include quality/quality.pug
+        include call/call.pug
+
+        //- Подвал
+        include footer/footer.pug
+
+        script(src="js/libs.min.js")
+        script(src="js/main.js") 
+
+        //- HelloPreload http://hello-site.ru/preloader/
+        style.
+            #hellopreloader > p {
+                display: none;
+            }
+            #hellopreloader_preload {
+                display: flex;
+                position: fixed;
+                z-index: 99999;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+                /* min-width: 1000px; */
+                background: #9B59B6 url(http://hello-site.ru//main/images/preloads/tail-spin.svg) center center no-repeat;
+                background-size: 41px;
+            }
+        #hellopreloader
+            #hellopreloader_preload
+            p
+                a(href="http://hello-site.ru") Hello-Site.ru. Бесплатный конструктор сайтов.
+        script.
+            var hellopreloader = document.getElementById("hellopreloader_preload");
+
+            function fadeOutnojquery(el) {
+                el.style.opacity = 1;
+                var interhellopreloader = setInterval(function () {
+                    el.style.opacity = el.style.opacity - 0.05;
+                    if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                    }
+                }, 16);
+            }
+
+            window.onload = function () {
+                setTimeout(function () {
+                    fadeOutnojquery(hellopreloader);
+                }, 1000);
+            };
+        //- HelloPreload http://hello-site.ru/preloader/

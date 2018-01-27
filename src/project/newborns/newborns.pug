@@ -1,0 +1,37 @@
+.newborns.tabs-newborns
+	.container
+		div.caption-section.cnsn_black
+			a(name="newborns")
+			div.caption-1
+				p Одежда для новорождённых
+			div.caption-line
+				img(src="img/black-line.png", alt="")
+			div.caption-desc
+				p Осень 2017
+		.tabs-product
+			.navbar.navbar-default
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-3', aria-expanded='false')
+						img(src="img/arrow_up.svg", alt="")
+					a.navbar-brand(href='#') Для младенцев
+					a.navbar-text Some text
+					a(href="#top2").menu-top
+						img(src="img/menu.png", alt="")
+				.collapse.navbar-collapse#bs-example-navbar-collapse-3
+					ul.tabs-ul
+						each item, index in ['Верхняя одежда', 'На выписку', 'Комбинезоны', 'Роспашенки', 'Ползунки', 'Носки, колготки']
+							li
+								a(href="#tabs-"+index)= item
+			.tabs-container
+				a(href="#top").tabs-button-up
+				button(href="#order" data-toggle="modal").tabs-button-yet Ещё
+				.tabs-body
+					each tabs in [0,1,2,3,4,5]
+						div(id="tabs-"+ tabs)
+							each product in [0,1,2,3,4,5]
+								+tabs-product(
+									'Комбинезон, Дгслн',
+									'img/newborns/product/product-' + tabs + '.png',
+									'Модный комбинезон. Выполнен из натурального хлопка. Модель с округлым вырезом горловины и длинными рукавами. Изделие дополнено застёжкой на кнопки. Комбинезон украшен контрастным принтом.',
+									'3 000'
+								)

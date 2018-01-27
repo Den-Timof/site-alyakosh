@@ -1,0 +1,39 @@
+.popular
+	.container
+		div.caption-section.cnsn_black_2
+			div.caption-1
+				p Популярная продукция
+			div.caption-line
+				img(src="img/black-line.png", alt="")
+			div.caption-desc
+				p Количество ограничено
+		div.products-pop
+			div.container-slider.flexslider.flexslider-1.flexslider-2
+				ul.slides
+					each popular in [0,1,2,3,4,5,6,7,8]
+						li.popular__product.product
+							.product__rating
+								div.rating-love
+									img(src="img/popular/popular-rating.svg", alt="")
+									img(src="img/popular/popular-rating.svg", alt="")
+									img(src="img/popular/popular-rating.svg", alt="")
+									img(src="img/popular/popular-rating.svg", alt="")
+									img(src="img/popular/popular-rating-2.svg", alt="")
+								.rating-num
+									p +5.93
+							.product__thumb
+								img(src="img/popular/product/product-" + popular + ".png", alt="")
+								.product-bg
+								.product__content
+									p Стильное платье для девочек школьного возраста. Изделие выполнено из высококачественной вискозы с добавлением эластана для лучшей посадки на фигуре
+								button(href="#order" data-toggle="modal").product__like
+									div.like-text
+										p Мне нравится!
+									div.like-img
+										img(src="img/popular/like.svg", alt="").like-black
+										img(src="img/like-white.svg", alt="").like-white
+							.product__title
+								.title-prod
+									p Платье, Shened 
+								.price-prod
+									p 25 000 тг

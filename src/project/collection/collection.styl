@@ -1,0 +1,61 @@
+.collection
+	display block
+
+	.caption-section
+		+media('xs')
+			display none
+	
+	.blocks-cn-mob
+		display none
+		a
+			&:hover
+				color black
+				text-decoration: none
+		+media('xs')
+			display flex
+			color rgba(94, 94, 94, 255);
+			justify-content: space-around
+			font-family: 'OpenSans-Regular';
+			padding 50px
+			font-size 26px
+		+media('xxs')
+			padding 20px 0
+			font-size 14px
+
+	.blocks-cn
+		display flex
+		flex-wrap wrap
+		+media('xs')
+			display none
+
+		.block-cn
+			margin 30px
+			border 1px solid #bebdbd
+			position relative
+			height 284px
+			width 220px
+			&:hover
+				cursor pointer
+				img
+					filter brightness(70%)
+				div
+					opacity 1
+			img
+				z-index 10
+				width 100%
+				height 100%
+				transition filter .2s linear 
+				filter brightness(100%)
+				
+			.block-cn__text
+				z-index 10
+				position absolute
+				color white
+				font-family 'OpenSans-SemiBold'
+				filter brightness(100%)
+				top 40%
+				left 0
+				right 0
+				opacity 0
+				text-align center
+				transition opacity .2s linear 

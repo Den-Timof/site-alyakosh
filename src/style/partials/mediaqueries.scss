@@ -1,0 +1,54 @@
+// Медиа-запросы
+$xxxs: 320px;
+$xxs: 575px;
+$xs: 767px;
+$sm: 768px;
+$md: 992px;
+$lg: 1300px;
+
+$port: 'portrait';
+
+@mixin respond-to($media) {
+  @if $media == xxxs {
+    @media only screen and (max-width: $xxxs) {
+      @content;
+    }
+  }
+  @if $media == xxs {
+    @media only screen and (max-width: $xxs) {
+      @content;
+    }
+  } @else if $media == xs {
+    @media only screen and (max-width: $xs) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  }
+}
+
+@mixin orientation($media) {
+
+}
+
+@include respond-to(xxxs) {}
+@include respond-to(xxs) {}
+@include respond-to(xs) {}
+@include respond-to(sm) {}
+@include respond-to(md) {}
+@include respond-to(lg) {}
+
+@media (orientation: landscape) and (max-width: 767px) {}
+@media only screen and (min-width: 768px) and (orientation: portrait) {}
+@media only screen and (min-width: 991px) and (max-width: 1299px) and (orientation: landscape) {}
+@media only screen and (max-width: 767px) and (orientation: landscape) {}

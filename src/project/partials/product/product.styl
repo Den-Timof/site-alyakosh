@@ -1,0 +1,158 @@
+.product
+    // padding 20px
+    background-color white
+    position relative
+    width 301px !important
+    height 535px
+    z-index 20
+    border 1px solid rgba(0,0,0,0.25)
+    margin-right 82px !important
+    transition background-color .2s linear
+    +media('xs')
+        width 500px !important
+        height 750px
+        margin 5px
+    +media('xxs')
+        width 250px !important
+        height 400px
+
+    &:hover
+        // background-color #b89bc6
+        z-index 20
+        cursor pointer
+        
+        +media('s')
+            border 1px solid rgba(144, 88, 171, 0.7)
+            .product__thumb
+                .product__content, .product-bg, .product__like
+                    opacity 1
+
+    .product__rating
+        z-index 10
+        display flex
+        align-items: center
+        position relative
+        width 100%
+        top: 10px
+        right 20px
+        justify-content: flex-end
+
+        .rating-love
+            display flex
+            align-items: center
+            margin-right 10px
+            img
+                width 20px
+                height 20px
+        .rating-num
+            font-family: 'OpenSans-Bold';
+            font-size 20px
+            border-bottom 1px solid black
+    
+    .product__thumb
+        // position absolute
+        z-index 5
+        top 0
+        left 0
+        background-color rgba(255, 255, 255, 0)
+        
+        & > img
+            width 100%
+            // height 100%
+            background-color #b89bc6
+            position relative
+            top -30px
+            +media('xs')
+                // width 90%
+                // margin 0 auto
+            +media('xxs')
+                // width 80%
+
+        .product-bg
+            position absolute
+            top 0
+            width 100%
+            height 100%
+            z-index 30
+            opacity 0
+            transition opacity .2s linear
+            background-color rgba(144, 88, 171, 0.7)
+
+        .product__content
+            position absolute 
+            top 35%
+            z-index 35
+            left 20px
+            right 20px
+            font-size 16px
+            font-family: 'OpenSans-Regular';
+            opacity 0
+            color white
+            transition opacity .2s linear
+        
+        .product__like
+            position absolute 
+            background-color white
+            border none
+            bottom 15%
+            display flex
+            justify-content: flex-start
+            font-family: 'OpenSans-Regular';
+            text-transform: uppercase
+            font-size 24px
+            width 100%
+            border 1px solid #b9b9b9
+            padding 0 !important
+            z-index 40
+            opacity 0
+            transition opacity .2s linear
+            +media('xs')
+                opacity 1
+
+            .like-text
+                padding 10px 25px
+                +media('xs')
+                    color white !important
+
+            .like-img
+                border-left 1px solid #b9b9b9
+                display flex
+                justify-content: center
+                align-items: center
+                width 18%
+                +media('xs')
+                    width 80px
+
+                img
+                    background-color white
+                    width 35px
+                    height 30px
+                    +media('xs')
+                        display none
+                .like-white
+                    display none 
+                    +media('xs')
+                        display block
+                        background-color #cd2767
+
+    .product__title
+        z-index 20
+        border-top 3px dashed #b41851
+        display flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        font-family: 'OpenSans-Regular';
+        font-size 24px
+        overflow hidden
+        background-color white
+        // padding-top: 7px
+
+        padding-bottom: 5px;
+        padding-top 5px
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    
+        .price-prod
+            color: rgba(205, 39, 103, 255);

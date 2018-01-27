@@ -1,0 +1,37 @@
+.accessories
+	.container.tabs-accessories
+		div.caption-section.cnsn_black
+			a(name="accessories")
+			div.caption-1
+				p Игрушки, сумки
+			div.caption-line
+				img(src="img/black-line.png", alt="")
+			div.caption-desc
+				p Осень 2017
+		.tabs-product
+			.navbar.navbar-default
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-4', aria-expanded='false')
+						img(src="img/arrow_up.svg", alt="")
+					a.navbar-brand(href='#') Аксессуары
+					a.navbar-text Some text
+					a(href="#top2").menu-top
+						img(src="img/menu.png", alt="")
+				.collapse.navbar-collapse#bs-example-navbar-collapse-4
+					ul.tabs-ul
+						each item, index in ['Игрушки', 'Сумки', 'Подгрузники', 'Детское питание', 'Гигиена и уход', 'Постель']
+							li
+								a(href="#tabs-"+index)= item
+			.tabs-container
+				a(href="#top").tabs-button-up
+				button(href="#order" data-toggle="modal").tabs-button-yet Ещё
+				.tabs-body
+					each tabs in [0,1,2,3,4,5]
+						div(id="tabs-"+ tabs)
+							each product in [0,1,2,3,4,5]
+								+tabs-product(
+									'Рюкзак, Hello Kitty',
+									'img/accessories/product/product-' + tabs + '.png',
+									'Мягкий детский рюкзак - игрушка для детей в детский садик. В комплект с рюкзаком входит милая мягкая игрушка. При необходимости игрушку можно достать с кармана и дать в руки',
+									'8 000'
+								)

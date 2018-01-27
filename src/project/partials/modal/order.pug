@@ -1,0 +1,22 @@
+#order.modal.fade
+    .modal-dialog
+        .modal-content
+            // Заголовок модального окна 
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                h4.modal-title Оформление заявки
+            // Основное содержимое модального окна 
+            .modal-body
+                form
+                    label
+                        //- img(src="img/modal/form-input-1.png", alt="")
+                        input(type="text" placeholder="Ваше имя: ")
+                    label
+                        //- img(src="img/modal/form-input-2.png", alt="")
+                        input(type="text" placeholder="Ваш телефон: ")
+                    textarea
+                        
+            // Футер модального окна 
+            .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Закрыть
+                button.btn.btn-primary(type='button') Заказать

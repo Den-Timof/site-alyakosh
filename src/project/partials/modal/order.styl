@@ -1,0 +1,61 @@
+#order
+    .modal-dialog
+        width 800px
+        top 5%
+        +media('xs')
+            width 600px
+        +media('xxs')
+            width 90%
+            top 3%
+            margin 0 auto
+
+        .modal-content
+            background-color: #c7326f;
+            font-family: 'PT Sans Narrow Web Regular';
+
+            .modal-header
+                .modal-title
+                    font-family: 'PT Sans Narrow Web Bold';
+                    color white
+                    text-transform uppercase
+                    text-align center
+                    font-size 1.8em
+                .close
+                    color white
+                    opacity 1
+            .modal-body
+                form
+                    display flex
+                    flex-direction column
+                    
+                    label
+                        display flex
+                        align-items center
+                        flex-direction row-reverse
+                        justify-content flex-end
+                        margin 15px 0
+
+                        input
+                            height 30px
+                            width 200px
+                            padding 5px
+                        
+                    textarea
+                        width 300px
+                        height 100px
+                        margin-top 20px
+                        padding 10px
+                        +media('xxs')
+                            width 100%
+
+            .modal-footer
+                .btn-primary
+                    background-color #e8bf2a
+                    border 2px solid #c7326f
+                    background-image none
+                    color #c7326f
+                .btn-default
+                    background-color white
+                    background-image none
+                    border 2px solid #c7326f
+                    color #c7326f

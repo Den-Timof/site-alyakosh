@@ -1,0 +1,47 @@
+mixin tabs-product(title, thumb, content, price)
+	.popular__product.product
+		.product__rating
+			div.rating-love
+				img(src="img/popular/popular-rating.svg", alt="")
+				img(src="img/popular/popular-rating.svg", alt="")
+				img(src="img/popular/popular-rating.svg", alt="")
+				img(src="img/popular/popular-rating.svg", alt="")
+				img(src="img/popular/popular-rating-2.svg", alt="")
+			.rating-num
+				p +5.93
+		.product__thumb
+			img(src="" + thumb, alt="")
+			.product-bg
+			.product__content
+				p #{content}
+			button(href="#order" data-toggle="modal").product__like
+				div.like-text
+					p Мне нравится!
+				div.like-img
+					img(src="img/popular/like.svg", alt="")
+					img(src="img/like-white.svg", alt="").like-white
+		.product__title
+			.title-prod
+				p #{title}
+			.price-prod
+				p #{price} тг
+
+//- mixin section-tabs(caption, ...items)
+//- 	ul
+//- 		p #{caption}
+//- 		each item, index in items
+//- 			li
+//- 				a(href="#tabs-"+index)= item
+//- 	.tabs-container
+//- 		a(href="#").tabs-button-up
+//- 		button(href="#order" data-toggle="modal").tabs-button-yet Ещё
+//- 		.tabs-body
+//- 			each tabs in [0,1,2,3,4,5]
+//- 				div(id="tabs-"+ tabs)
+//- 					each product in [0,1,2,3,4,5]
+//- 						+tabs-product(
+//- 							'Платье, Shened',
+//- 							'img/girl/product/product-' + tabs + '.png',
+//- 							'Стильное платье для девочек школьного возраста. Изделие выполнено из высококачественной вискозы с добавлением эластана для лучшей посадки на фигуре',
+//- 							'25 000'
+//- 						)

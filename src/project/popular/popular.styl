@@ -1,0 +1,132 @@
+.popular
+	display block
+	background-color #ebebeb
+	+media('xs')
+		padding 20px 0 0 0
+	+media('xxs')
+		padding 20px 0 0 0
+
+	.caption-section
+		+media('xxs')
+			.caption-1
+				p
+					font-size 26px !important
+			.caption-desc
+				p
+					font-size 20px !important
+	
+	.products-pop
+		padding 0 30px 100px
+		+media('xs')
+			padding 0 0 100px
+
+		.flexslider
+			background-color #ebebeb
+			border 3px solid #ebebeb
+
+			.flex-viewport
+				ul
+					display flex
+
+					li.product
+						border: none
+						+media('xs')
+							width: 301px !important;
+							height: 500px;
+						+media('xxs')
+							width 254px !important	
+						.product__like
+							
+							+media('xs')
+								background-color #cd2767
+							display flex
+							justify-content: space-between !important
+							.like-text
+								padding 10px 0
+								display flex
+								width 100%
+								justify-content: center
+								align-items: center
+							.like-img
+								.like-white
+									+media('s')
+										display none
+								.like-black
+									+media('xs')
+										display none !important
+							+media('xs')
+								bottom 15%
+							+media('xxs')
+								bottom 20%
+								border: 1px solid #cd2767;
+								background: #cd2767;
+								color: white;
+								font-size 14px
+								display flex
+								.like-img
+									width 60px
+									img
+										display block
+
+			.flex-direction-nav
+				.flex-nav-prev
+					.flex-prev
+						width 35px
+						height 60px
+						opacity 1
+						left -5%
+						&:hover
+							left -5%
+						+media('xs')
+							left -7%
+							&:hover
+								left -7%
+						+media('xxs')
+							left -17%
+							&:hover
+								left -17%
+						+media('xxxs')
+							left 0
+							&:hover
+								left 0
+						
+						&:before
+							content: url('../img/popular/arrow-prev.svg')
+				.flex-nav-next
+					.flex-next
+						opacity 1
+						width 35px
+						height 60px
+						right -5%
+						&:hover
+							right -5%
+						+media('xs')
+							right -7%
+							&:hover
+								right -7%
+						+media('xxs')
+							right -17%
+							&:hover
+								right -17%
+						+media('xxxs')
+							right 0
+							&:hover
+								right 0
+						&:before
+							content: url('../img/popular/arrow-next.svg')
+			
+			.flex-control-paging
+				&.flex-control-nav
+					bottom -75px
+				li
+					.flex-active
+						background #cd2767
+						border 2px solid #cd2767
+					a
+						border 2px solid #cd2767
+						background-color white
+						width 30px
+						height 30px
+						+media('xxs')
+							width 15px
+							height 15px

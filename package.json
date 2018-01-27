@@ -1,0 +1,63 @@
+{
+  "name": "alyakosh",
+  "version": "1.0.0",
+  "description": "Вёрстка магазина детской одежды Alyakosh",
+  "main": "gulpfile.js",
+  "keywords": [
+    "pug",
+    "html",
+    "css",
+    "stylus",
+    "gulp",
+    "bower"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make-block": "babel-node make-block.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh@github.com:Den-Timof/site-alyakosh.git"
+  },
+  "author": "Denis Timofeev <den.tim.web@mail.ru> (https://github.com/Den-Timof)",
+  "bugs": {
+    "url": "https://github.com/Den-Timof/site-alyakosh/issues/",
+    "email": "den.tim.web@mail.ru"
+  },
+  "homepage": "https://github.com/Den-Timof/site-alyakosh.git",
+  "engines": {
+    "node": ">=7.2.1",
+    "npm": ">=3.10.10"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "del": "^2.2.2",
+    "flexslider": "^2.6.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-html2pug": "^1.1.0",
+    "gulp-imagemin": "^3.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.1.0",
+    "gulp-pug-linter": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-w3c-css": "^1.0.2",
+    "gulp-w3c-html": "^1.0.1",
+    "gulp-w3c-html-validation": "0.0.1",
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-pngquant": "^5.0.0",
+    "jquery": "^3.2.1",
+    "jquery-smooth-scroll": "^2.2.0"
+  }
+}

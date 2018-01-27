@@ -1,0 +1,76 @@
+.birthday
+	background-image: url('../img/birthday/birthday-bg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: -20% center;
+
+	+media('lg')
+		background-position 20% center;
+
+	+media('xs')
+		background-position: 170% 10%;
+		background-size: 120%;
+		overflow: hidden
+	+media('xxs')
+		background-image: url('')
+		justify-content: center
+	
+	& > .container
+		display flex
+		justify-content: flex-end
+		+media('xs')
+			justify-content: center
+
+
+	.birthday__circle
+		position relative
+		background-image: url('../img/birthday/bd-circle.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width 540px
+		height 540px
+		display flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		margin 60px 0
+		right -100px
+
+		+media('xs')
+			margin 0
+			left: 150px;
+			top: -100px;
+		+media('xxs')
+			left 0px
+			top 0px
+			width 360px
+			height 360px
+			margin 10px 0
+
+		img
+			width 220px
+			+media('xxs')
+				width 50%
+
+		button 
+			background-color #ed008c
+			border 1px solid white
+			color white
+			border-radius 15px
+			padding 5px 40px
+			margin 20px
+			text-transform: uppercase
+			font-family: 'OpenSans-Regular';
+
+			+media('xxs')
+				padding 5px 20px
+
+			&:hover
+				background-color white
+				border 1px solid #ed008c
+				color #ed008c
+			&:active
+				background-color #ed008c
+				border 1px solid white
+				color white

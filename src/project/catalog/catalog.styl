@@ -1,0 +1,98 @@
+.catalog
+	background-image: url('../img/catalog/catalog-bg.png')
+	background-repeat: no-repeat;
+	background-size cover
+	background-position: 50% 0%;
+	+media('lg')
+		background-size: 70%;
+
+	+media('xs')
+		background-position 97% 0
+		background-size 170%
+		position relative
+		height: 500px
+		overflow: hidden
+	+media('xxs')
+		background-position: 70% 5%
+		background-size: 300%;
+		height 380px
+
+	& > .container
+		display flex
+		align-items: center
+		justify-content: flex-end
+
+		.catalog__circle
+			position relative
+			background-image: url('../img/catalog/catalog-circle.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 30% 10%;
+			width 420px
+			height 420px
+			right -50px
+			display flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin 60px 0
+			+media('lg')
+				right -130px
+			+media('xs')
+				position absolute
+				align-items: flex-start
+				
+				top: -120px
+				right -120px
+				width 600px
+				height 600px
+			+media('xxs')
+				right -80px
+				top 30px
+				width 300px
+				height 300px
+				margin 0
+
+			img
+				width 220px
+				+media('xs')
+					position relative
+					width 300px
+					left 130px
+					top 30px
+				+media('xxs')
+					left 70px
+					width 130px
+					top 0
+
+			button 
+				background-color #00d8c2
+				border 1px solid white
+				color white
+				border-radius 15px
+				padding 5px 40px
+				margin 20px
+				text-transform: uppercase
+				font-family: 'OpenSans-Regular';
+				font-size 25px
+				+media('xs')
+					border-radius: 10px
+					padding 5px 20px
+					margin 20px 10px
+					font-size 25px
+					position relative
+					top 40px
+					left 190px
+				+media('xxs')
+					font-size 20px
+					left 60px
+					top 0px
+
+				&:hover
+					background-color white
+					border 1px solid #00d8c2
+					color #00d8c2
+				&:active
+					background-color #00d8c2
+					border 1px solid white
+					color white

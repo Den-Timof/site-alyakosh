@@ -1,0 +1,88 @@
+
+.caption-section
+	margin 60px 0
+	+media('xxs')
+		margin 20px 10px
+		.caption-1
+			p
+				font-size 24px !important
+		.caption-desc
+			p
+				font-size 18px !important
+	// Стили заголовка секции. Белый стиль
+	&.cnsn_white
+		div:nth-child(1)
+			p 
+				color white
+				font-family 'FrizQuadrataC'
+				text-transform uppercase
+				text-align center
+				font-size 38pt
+				+media('xs')
+					font-family: 'FrizQuadrataC';
+
+		div:nth-child(2)
+			display flex
+			justify-content: center
+			align-items center
+			margin 10px 0
+			+media('xs')
+				display none
+
+		div:nth-child(3)
+			p
+				color white
+				font-family: 'Vivaldi Script';
+				text-align center
+				font-size 37px
+
+	// Стили заголовка секции. Чёрный стиль
+	&.cnsn_black
+		.caption-1
+			p 
+				color black
+				font-family 'FrizQuadrataC'
+				text-transform uppercase
+				text-align center
+				font-size 38pt
+				+media('xs')
+					font-family: 'FrizQuadrataC';
+
+		.caption-line
+			display flex
+			justify-content: center
+			align-items center
+			margin 20px 0
+			+media('xs')
+				display none
+
+		.caption-desc
+			p
+				color black
+				font-family: 'Vivaldi Script';
+				text-align center
+				font-size 37px
+
+	&.cnsn_black_2
+		.caption-1
+			p 
+				color black
+				font-family 'FrizQuadrataC'
+				text-transform uppercase
+				text-align center
+				font-size 38pt
+				+media('xs')
+					font-family: 'FrizQuadrataC';
+
+		.caption-line
+			display flex
+			justify-content: center
+			align-items center
+			margin 20px 0
+
+		.caption-desc
+			p
+				color black
+				font-family: 'Vivaldi Script';
+				text-align center
+				font-size 37px

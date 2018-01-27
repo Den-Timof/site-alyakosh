@@ -1,0 +1,33 @@
+.button
+    color: white;
+    background-color: #c7326f;
+    border: 2px solid #c7326f;
+    font-family: 'OpenSans-Regular';
+    font-size: 27px;
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: -0.7px;
+    padding: 10px 30px;
+    +media('xs')
+        width 700px
+        height 80px
+        font-size 40px
+    +media('xxs')
+        width 150px
+        font-size: 20px
+        padding 10px 15px
+        height auto
+        font-size 20px
+
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: #c7326f;
+        border: 2px solid #c7326f;
+    }
+    &:active {
+        color: white;
+        background-color: #c7326f;
+        border: 2px solid #c7326f;
+    }
